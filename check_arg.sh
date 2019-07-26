@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/bash
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
 # Initialize our own variables:
@@ -7,16 +7,16 @@ error="please provide correct arguments and options\nUsage: $0 [-i|-n] [USERS]\n
 \nArguments: list of user names\nEvery user name must match this regular expression: '^[a-z][a-z0-9_]*$'"
 strng_error='ERR: option after an argument or wrong argument or wrong option 2:'
 
-if [[ -z $@ ]]; then	#Option and Parameter Check.
+if [[ -z $@ ]]; then	#This if statemens cehcks Options and Parameters.
         echo -e $error
         exit 0
     fi
 
-while getopts  ":n: :i:" opt; do #using getopts option inroder to control options and arguments
+while getopts  ":n: :i:" opt; do #using getopts option inorder to control options and arguments
 
-    
+
     case "$opt" in
-    i)  
+    i)
         if [[ $OPTARG =~ ^[a-z][a-z0-9_]*$ ]]; then # checking regular experitios.
         echo 'Options and arguments okay'
         echo 'running in interactive mode'
@@ -43,7 +43,7 @@ while getopts  ":n: :i:" opt; do #using getopts option inroder to control option
 
     :)  echo "Invalid Option: -$OPTARG requires an argument"
         exit 1
-    
+
     esac
 
 done
@@ -53,4 +53,3 @@ echo -e $error
 exit 1
 
 shift $((OPTIND-1))
-
