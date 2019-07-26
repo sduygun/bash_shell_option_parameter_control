@@ -33,7 +33,7 @@ while getopts  ":n: :i:" opt; do #using getopts option inroder to control option
         echo 'running in noninteractive mode'
         exit 0
         else
-        echo "oops"
+        echo $error
         exit 1
         fi
         ;;
