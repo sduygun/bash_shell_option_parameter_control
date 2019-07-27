@@ -1,5 +1,5 @@
 #! /bin/bash
-OPTIND=1         # Reset in case getopts has been used previously in the shell.
+OPTIND=1 # Reset in case getopts has been used previously in the shell.
 
 # Initialize our own variables:
 
